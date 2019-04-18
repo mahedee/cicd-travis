@@ -4,7 +4,7 @@ env: PATH="/c/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuil
 install:
   - choco install nuget.commandline
   - nuget restore Src/HRM/HRM.sln
-  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+  - choco install xunit
 script:
   - ./build.bat
-  - ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
+  - xunit.console ./Src/HRM/HRMUnitTests/bin/Release/HRMUnitTests.dll
