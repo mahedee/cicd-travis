@@ -1,3 +1,1 @@
-msbuild
-msbuild.exe
-msbuild.exe /p:Configuration=Release Src/HRM/HRM.sln
+msbuild /p:Configuration=Release Src/HRM/HRM.sln
